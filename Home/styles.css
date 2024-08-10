@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Start */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: lightgrey;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nasc-logo {
+    height: 60px;
+    width: 100%;
+}
+
+.header .request {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.request:hover{
+    text-decoration: underline;
+}
+/* Header End */
+
+/* Search Box Start */
+#search-cont {
+    background-color: #f9f5f4;
+    height: 300px;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* background-image: url("https://tngasa.com/wp-content/uploads/2022/06/Nehru-Arts-Science-College-coimbatore.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; */
+}
+
+.search-title{
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 20px white;
+}
+
+.search-box{
+    position: relative;
+}
+
+.search-box > input{
+    width: 300px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+    border: 1px solid black;
+}
+
+.search-box > input:focus{
+    outline: 1.5px solid black;
+}
+.search-box > button{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+
+.search-box > button > i{
+    color: black;
+}
+
+.search-box > button > i:hover{
+    color: rgb(162, 163, 163);
+}
+/* Search Box End */
+
+/* Grid Strat */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 30px 30px;
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .main-grid > a {
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .main-grid:nth-child(7){
+    grid-template-columns: 1/span 2;
+  }
+  .main-grid > a:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .main-grid > a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px black; 
+  }
+  
+  .main-grid > a:active {
+    transform: scale(0.9); 
+  }
+
+  @media (max-width: 768px) {
+    .main-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 525px) {
+    .main-grid {
+      grid-template-columns: repeat(1,1fr);
+    }
+
+    .search-box > input{
+        width: 90%;
+        min-width: 150px;
+    }
+  }
+  /* Grid End */
