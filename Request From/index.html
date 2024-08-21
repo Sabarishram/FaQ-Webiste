@@ -14,46 +14,53 @@
 </head>
 <body>
     <header class="header">
-        <a href=""><img class="nasc-logo" src="/assets/Images/NASC_logo_PNG.png" alt="NASC Logo"></a>
+        <a href="../Home/index.html"><img class="nasc-logo" src="/assets/Images/NASC_logo_PNG.png" alt="NASC Logo"></a>
         <a href="../Request From/index.html" class="request">Submit a request</a>
     </header>
 
     <div class="form-cont">
-        <form>
+        <form method="post" action="" name="contact-form">
             <h1>Submit A Request</h1>
 
             <label for="name">Your Name* :</label>
-            <input type="text" required class="input" placeholder="Enter you Name"><br><br>
+            <input type="text" required class="input" name="Name" placeholder="Enter your Name"><br><br>
 
             <label for="email">Your E-mail* :</label>
-            <input type="email" class="input" placeholder="Enter your Email-ID"><br><br>
+            <input type="email" class="input" name="Email-ID" placeholder="Enter your Email-ID"><br><br>
 
-            <label for="phn-number">Your Phone Number :</label>
-            <input type="text" class="input" placeholder="Enter your Phone Number"><br><br>
+            <label for="phn-number">Your Phone Number* :</label>
+            <input type="text" class="input" name="Phone-Number" placeholder="Enter your Phone Number" required><br><br>
 
-            <label for="contact-id">Student / Employee ID :</label>
-            <input type="text" class="input" placeholder="Enter your ID"><br><br>
-
-            <label for="reason">Reason for Contact :</label>
-            <select name="reason" id="reason" class="input" required>
-                <option value="">Select one</option>
-                <option value="Option 1">Option 1</option>
-                <option value="Option 2">Option 2</option>
-                <option value="Option 3">Option 3</option>
-                <option value="Option 4">Option 4</option>
-                <option value="Option 5">Option 5</option>
+            <label for="reason">Reason for Contact* :</label>
+            <select name="Reason" id="reason" class="input" required>
+                <option value="" disabled selected style="color :#999">- - Select one - -</option>
+                <option value="Admission">Admission</option>
+                <option value="Transport">Transport</option>
+                <option value="Placement">Placement</option>
+                <option value="Hostel">Hostel</option>
+                <option value="Activities">Activities</option>
+                <option value="Academics">Academics</option>
+                <option value="Festivels/Events">Festivels/Events</option>
+                <option value="College Details">College Details</option>
                 <option value="Other">Other</option>
             </select><br><br>
 
-            <label for="subject">Subject :</label><br>
-            <input type="text" class="input" placeholder="One line of your Request"><br><br>
+            <label for="subject">Subject* :</label><br>
+            <input type="text" class="input" name="Subject" placeholder="One line of your Request" required><br><br>
 
             <label for="description">Description* :</label><br>
-            <textarea name="description" id="" placeholder="Enter the Description" rows="10" cols="60" class="input"></textarea>
+            <textarea name="Description" placeholder="Enter the Description" rows="3" class="input" required></textarea>
             <p>*Please enter the details of your request. Our team will respond you as soon as possible.</p>
 
             <input type="submit" value="Submit Request" id="submit">
         </form>
+
+        <!-- Loading animation -->
+        <div id="loading" style="display:none;">
+            <p>Loading... Please wait!</p>
+        </div>
     </div>
+
+<script src="script.js"></script>
 </body>
 </html>
